@@ -1,0 +1,23 @@
+{
+  "development": {
+    "username": "root",
+    "password": "@Chrisvibe070697000",
+    "database": "expensify",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "test": {
+    "username": "sql8759379",
+    "password": "x4njfdipLh",
+    "database": "sql8759379",
+    "host": "sql8.freesqldatabase.com",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "sql8759379",
+    "password": "x4njfdipLh",
+    "database": "sql8759379",
+    "host": "sql8.freesqldatabase.com",
+    "dialect": "mysql"
+  }
+}
