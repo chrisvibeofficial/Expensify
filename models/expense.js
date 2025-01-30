@@ -21,7 +21,7 @@ expense.init(
       onDelete: 'CASCADE',
       onUpdate: 'CASCADE'
     },
-    category: {
+    description: {
       type: DataTypes.STRING,
       allowNull: false
     },
