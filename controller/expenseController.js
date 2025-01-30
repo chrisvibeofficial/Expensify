@@ -81,7 +81,7 @@ exports.getAllExpensesByUser = async (req, res) => {
 exports.updateDescription = async (req, res) => {
   try {
     const { id } = req.params;
-    const { startDate, category } = req.body;
+    const { startDate, description } = req.body;
     const checkUser = await userModel.findOne({ where: { id: id } });
 
     if (!checkUser) {
@@ -89,7 +89,7 @@ exports.updateDescription = async (req, res) => {
     }
     const update = { startDate, description };
     const userDescription = await expensesModel.findOne({ where: { userId: checkUser.dataValues.id } });
-    const updateDescription = await expensesModel.update(update, { where: { description: userCategory.description } });
+    const updateDescription = await expensesModel.update(update, { where: { description: userDescription.description } });
     res.status(200).json(`Expenses made 0n ${startDate} has been updated to ${description}`);
   } catch (error) {
     res.status(500).json({
@@ -111,7 +111,7 @@ exports.updateAmount = async (req, res) => {
     }
     const update = { startDate, amount };
     const userDescription = await expensesModel.findOne({ where: { userId: checkUser.dataValues.id } });
-    const updateDescription = await expensesModel.update(update, { where: { category: userDescription.description } });
+    const updateDescription = await expensesModel.update(update, { where: { description: userDescription.description } });
     res.status(200).json(`Cost of expenses made 0n ${startDate} has been updated to ${amount}`);
   } catch (error) {
     res.status(500).json({
