@@ -24,11 +24,11 @@ user.init(
       allowNull: false
     },
     gender: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(6),
       allowNull: false
     },
     phoneNumber: {
-      type: DataTypes.STRING,
+      type: DataTypes.STRING(11),
       allowNull: false
     },
   },

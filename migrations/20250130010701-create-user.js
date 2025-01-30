@@ -21,11 +21,11 @@ module.exports = {
         allowNull: false
       },
       gender: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(6),
         allowNull: false
       },
       phoneNumber: {
-        type: Sequelize.STRING,
+        type: Sequelize.STRING(11),
         allowNull: false
       },
       createdAt: {
