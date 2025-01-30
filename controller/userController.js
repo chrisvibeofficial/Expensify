@@ -4,11 +4,11 @@ exports.createUser = async (req, res) => {
   try {
     const firstRandomNum = Math.floor(Math.random() * 1000);
     const secondRandomNum = Math.floor(Math.random() * 100);
-    const UID = 'UID' + firstRandomNum + 'BM' + secondRandomNum;
+    const id = 'UID' + firstRandomNum + 'BM' + secondRandomNum;
     const { firstName, lastName, email, gender, phoneNumber } = req.body;
 
     const userData = {
-      id: UID,
+      id: id,
       firstName,
       lastName,
       email,

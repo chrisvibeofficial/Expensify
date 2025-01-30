@@ -3,11 +3,13 @@ const express = require('express');
 const port = 4580;
 const cors = require('cors');
 const userRouter = require('./router/userRouter')
+const expenseRouter = require('./router/expenseRouter')
 const app = express();
 
 app.use(express.json());
 app.use(cors());
-app.use('/api/v1', userRouter)
+app.use('/api/v1', userRouter);
+app.use('/api/v1', expenseRouter);
 
 
 const server = async () => {
